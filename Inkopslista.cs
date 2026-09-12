@@ -21,11 +21,8 @@ while (true)
     }
     Console.WriteLine($"    Total {total} kr");
 
-   
-   
     Console.WriteLine("Skriv en vara, ett nummer eller Avsluta: ");
-    string input = Console.ReadLine();
-
+    string? input = Console.ReadLine();
 
     if (input == Avsluta)
     {
@@ -47,6 +44,19 @@ while (true)
             Console.WriteLine("Nummeret finns inte i listan");
         }
  
+    }
+    else
+    {
+        Console.WriteLine("Ange pris: ");
+        string? prisText = Console.ReadLine();
+
+
+        if (int.TryParse(prisText, out int pris))
+        {
+        
+            produktNamn.Add(input);
+            produktPriserna.Add(pris);
+        }       
     
     }
 
