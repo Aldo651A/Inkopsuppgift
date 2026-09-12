@@ -24,7 +24,7 @@ while (true)
     Console.WriteLine("Skriv en vara, ett nummer eller Avsluta: ");
     string? input = Console.ReadLine();
 
-    if (input == Avsluta)
+    if (input == "Avsluta")
     {
         break;
     }
@@ -54,16 +54,11 @@ while (true)
         if (int.TryParse(prisText, out int pris))
         {
         
-            produktNamn.Add(input);
+            produktNamn.Add(input??"");
             produktPriserna.Add(pris);
         }       
     
     }
-
-
-
-
-
 
 
 }
