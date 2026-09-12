@@ -28,11 +28,16 @@ while (true)
     {
         break;
     }
-     
-    if (hogstaPris <= produktPriserna[i])
+
+    for (int i = 0; i < produktNamn.Count; i++)
     {
-        hogstaPris =  produktPriserna[i];
-        dyrastIndex = i;
+     
+        if (hogstaPris <= produktPriserna[i])
+        {
+            hogstaPris =  produktPriserna[i];
+            dyrastIndex = i;
+        }
+        
     }
     Console.WriteLine($" Den dyraste varan är {produktNamn[dyrastIndex]} och den kostar {hogstaPris} kr ");
 
