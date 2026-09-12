@@ -10,5 +10,5 @@ produktPriser.Add(89);
 
 for (int i = 0; i < produktNamn.Count; i++)
 {
-    Console.WriteLine($"{i + 1}");
+    Console.WriteLine($" {i + 1}  {produktNamn[i]} - {produktPriser[i]} kr");
 }
