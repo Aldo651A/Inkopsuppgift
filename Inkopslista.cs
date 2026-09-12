@@ -10,21 +10,26 @@ produktPriser.Add(89);
 
 while (true)
 {
+    // Meny
+    
 
-    if 
+    int total = 0;
 
-        int total = 0;
+ or (int i = 0; i < produktNamn.Count; i++)
+    {
+        Console.WriteLine($" {i + 1}  {produktNamn[i]} - {produktPriser[i]} kr");
+        total += produktPriser[i];
+            
+    }
+    Console.WriteLine($"    Total {total} kr");
 
-        for (int i = 0; i < produktNamn.Count; i++)
-        {
-            Console.WriteLine($" {i + 1}  {produktNamn[i]} - {produktPriser[i]} kr");
-            total += produktPriser[i];
-            break;
-        }
-        Console.WriteLine($"    Total {total} kr");
+    Console.WriteLine("Skriv en vara, ett nummer eller Avsluta: ");
+    string input = Console.ReadLine();
 
-        Console.WriteLine("Skriv en vara, ett nummer eller Avsluta: ");
-        string input = Console.ReadLine();
+    if (Val == "produktNamn ")
+    {
+        Console.Write("Ange varans namn: ");
+    }
 
 
 }
