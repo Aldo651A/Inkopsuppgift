@@ -28,6 +28,14 @@ while (true)
     {
         break;
     }
+     
+    if (hogstaPris <= produktPriserna[i])
+    {
+        hogstaPris =  produktPriserna[i];
+        dyrastIndex = i;
+    }
+    Console.WriteLine($" Den dyraste varan är {produktNamn[dyrastIndex]} och den kostar {hogstaPris} kr ");
+
 
     if (int.TryParse(input, out int position))
     {
