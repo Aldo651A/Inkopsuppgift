@@ -1,6 +1,13 @@
+// Här skapar både en string lista och en int lista.
+// String skapr en tom lista som bara ter emot textsträngar
+// som t ex Mjölk, Ost ocg Bröd
+// int skapar en tom lista som bara tar emot heltal 
+// som t ex priserna på produkterna 15, 32 och 89
 List<string>produktNamn = [];
 List<int>produktPriserna = [];
 
+// här lägger jag till olika produkter och priser.
+// jag kan även lägga till en ny produkt eller ta bort en produkt.
 produktNamn.Add("Mjölk");
 produktPriserna.Add(15);
 produktNamn.Add("Bröd");
@@ -8,6 +15,9 @@ produktPriserna.Add(32);
 produktNamn.Add("Ost");
 produktPriserna.Add(89);
 
+// Detta är en loop som körs om och om igen eftersom den är sant (true)
+// detta kommer att köras tills den läser break; 
+// eler användaren skriver Avsluta i detta fallet.
 while (true)
 {
     
@@ -29,7 +39,7 @@ while (true)
         break;
     }
 
-    if (input?.ToLover() == "dyrast")
+    if (input?.ToLower() == "dyrast")
     {
         int hogstaPris = -1;
         int dyrastIndex = -1;
