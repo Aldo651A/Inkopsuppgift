@@ -29,17 +29,24 @@ while (true)
         break;
     }
 
-    for (int i = 0; i < produktNamn.Count; i++)
+    if (input == "dyrast")
     {
-     
-        if (hogstaPris <= produktPriserna[i])
+        int hogstaPris = -1;
+        int dyrastIndex = -1;
+
+        for (int i = 0; i < produktNamn.Count; i++)
         {
-            hogstaPris =  produktPriserna[i];
-            dyrastIndex = i;
-        }
         
-    }
-    Console.WriteLine($" Den dyraste varan är {produktNamn[dyrastIndex]} och den kostar {hogstaPris} kr ");
+            if (hogstaPris <= produktPriserna[i])
+            {
+                hogstaPris =  produktPriserna[i];
+                dyrastIndex = i;
+            }
+            
+        }
+       
+       Console.WriteLine($" Den dyraste varan är {produktNamn[dyrastIndex]} och den kostar {hogstaPris} kr ");
+    } 
 
 
     if (int.TryParse(input, out int position))
