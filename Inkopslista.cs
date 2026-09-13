@@ -29,7 +29,7 @@ while (true)
         break;
     }
 
-    if (input == "dyrast")
+    if (input?.ToLover() == "dyrast")
     {
         int hogstaPris = -1;
         int dyrastIndex = -1;
@@ -44,8 +44,9 @@ while (true)
             }
             
         }
-       
-       Console.WriteLine($" Den dyraste varan är {produktNamn[dyrastIndex]} och den kostar {hogstaPris} kr ");
+    Console.WriteLine($" Den dyraste varan är {produktNamn[dyrastIndex]} och den kostar {hogstaPris} kr ");
+    
+    continue;
     } 
 
 
