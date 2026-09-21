@@ -2,9 +2,7 @@
 // String skapr en tom lista som bara ter emot textsträngar
 // som t ex Mjölk, Ost ocg Bröd
 // int skapar en tom lista som bara tar emot heltal 
-// som t ex priserna på produkterna 15, 32 och 89
-using System.Security;
-
+// som t ex priserna på produkterna 15, 32 och
 List<string>produktNamn = [];
 List<int>produktPriserna = [];
 
@@ -22,6 +20,7 @@ produktPriserna.Add(89);
 // eler användaren skriver Avsluta i detta fallet.
 while (true)
 {
+    Console.Clear();
     // Här deklarerar och initierar att total = 0; och detta ska läsas in
     // som en heltal
     int total = 0;
@@ -79,13 +78,17 @@ while (true)
             }
             
         }
-     // När loppen har kontrollerat alla priser så hämtas varan som är dyrast
-     Console.WriteLine($" Den dyraste varan är {produktNamn[dyrastIndex]} och den kostar {hogstaPris} kr ");
+        // När loppen har kontrollerat alla priser så hämtas varan som är dyrast
+        Console.WriteLine($"Den dyraste varan är {produktNamn[dyrastIndex]} och den kostar {hogstaPris} kr ");
+     
+        Console.WriteLine("Tryck på valfit tangent för att fotsätta");
+        Console.ReadKey();
+
     
-     continue; 
-     // jag fick använda denna metoden för att hoppa över resten av koden 
-     // och starta nästa varv i loopen direkt. 
-     // För att hindra att "Ange pris" skrivs ut.
+        continue; 
+        // jag fick använda denna metoden för att hoppa över resten av koden 
+        // och starta nästa varv i loopen direkt. 
+        // För att hindra att "Ange pris" skrivs ut.
               
     } 
 
@@ -110,6 +113,8 @@ while (true)
             // då får du meddelandet som är ljusblå här nedanför.
             Console.WriteLine("Nummeret finns inte i listan");
         }
+        Console.WriteLine("Tryck på valfit tangent för att fotsätta");
+        Console.ReadKey();
  
     }
     else
