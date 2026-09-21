@@ -81,7 +81,7 @@ while (true)
         // När loppen har kontrollerat alla priser så hämtas varan som är dyrast
         Console.WriteLine($"Den dyraste varan är {produktNamn[dyrastIndex]} och den kostar {hogstaPris} kr ");
      
-        Console.WriteLine("Tryck på valfit tangent för att fotsätta");
+        Console.WriteLine("Tryck på valfrit tangent för att fotsätta. ");
         Console.ReadKey();
 
     
